@@ -13,7 +13,8 @@ app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.use(logger('common')) // Standard Apache common log output.
 app.use(express.static('public'))
-// app.use('/', require('./routes/index'))
+
+app.use('/', require('./routes/index'))
 
 const localIp = Object.values(require('os').networkInterfaces())
   .flat()
