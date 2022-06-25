@@ -7,7 +7,7 @@ const logger = require('morgan')
 
 const app = express()
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000 // set the port
 
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
