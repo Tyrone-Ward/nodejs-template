@@ -7,5 +7,9 @@ exports.homePage = (req, res) => {
 exports.registerUser = (req, res) => {
   userName = req.body.userName
   password = req.body.userName
-  res.send(`Welcome, ${userName}.`)
+  if (!userName) {
+    return res.status(400).send('No name provided.')
+  }
+
+  res.status(200).send(`Welcome, ${userName}.`)
 }

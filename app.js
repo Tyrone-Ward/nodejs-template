@@ -22,5 +22,5 @@ const localIp = Object.values(require('os').networkInterfaces())
   .find(Boolean).address
 
 app.listen(PORT, () => {
-  console.log(`Service listening at http://${localIp}:${PORT}`)
+  console.log(`Server listening at http://${localIp}:${PORT}/`)
 })
