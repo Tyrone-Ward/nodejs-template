@@ -7,7 +7,7 @@ A barebones Node.js app using [Express 4](http://expressjs.com/).
 Make sure you have [Node.js](http://nodejs.org/) and the [nodemon](https://www.npmjs.com/package/nodemon) installed.
 
 ```sh
-$ git clone https://github.com/Tyrone-Ward/nodejs-template.git # or clone your own fork
+$ git clone https://github.com/Tyrone-Ward/nodejs-template.git
 $ cd nodejs-template
 $ npm install
 $ npm start
