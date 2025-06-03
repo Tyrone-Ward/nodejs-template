@@ -5,8 +5,8 @@ A barebones Node.js template project designed to help you speed up the process o
 ### 🚀 Main features
 
 - [ExpressJS](http://expressjs.com) framework with [TypeScript](https://www.typescriptlang.org/) on board
-- OpenAPI 3.1 compliant
-- Simple and universal logging with support for multiple storage devices for your logs
+- Built-in API documentation the at the `/api-docs` endpoint
+- Simple and universal logging with support for multiple storage devices
 
 ## 📁 Project Structure
 
