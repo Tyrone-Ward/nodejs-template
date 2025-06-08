@@ -1,14 +1,14 @@
 import os from 'node:os'
+import { Request, Response } from 'express'
 import { AppError } from '../utils/AppError.js'
 
-export const root = (req, res) => {
+export const root = (req: Request, res: Response) => {
   res.send('hello')
 }
-export const error = (req, res) => {
+export const error = () => {
   throw new AppError('INVALID_SUBSCRIPTION', 'Subscription not found', 400)
 }
-export const apiHealth = (req, res) => {
-  res.status(200)
+export const apiHealth = (req: Request, res: Response) => {
   res.json({
     database: 'green',
     health: 'green',

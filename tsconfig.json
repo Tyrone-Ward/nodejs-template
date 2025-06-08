@@ -1,0 +1,23 @@
+{
+    "extends": "@tsconfig/node20/tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "paths": {
+            "@config/*": ["config/*"],
+            "@controllers/*": ["controllers/*"],
+            "@middlewares/*": ["middlewares/*"],
+            "@routes/*": ["routes/*"],
+            "@services/*": ["services/*"],
+            "@utils/*": ["utils/*"]
+        },
+        "outDir": "dist",
+        "allowJs": true,
+        "checkJs": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

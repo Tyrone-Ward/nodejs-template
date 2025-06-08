@@ -1,6 +1,7 @@
 import { AppError } from '../utils/AppError.js'
+import { Request, Response, NextFunction } from 'express'
 
-export const errorHandler = (error, req, res, next) => {
+export const errorHandler = (error, req: Request, res: Response, next: NextFunction) => {
   console.log(error)
 
   if (error.name === 'ValidationError') {
