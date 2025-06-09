@@ -66,7 +66,7 @@ Note: API request information (request url, response code, timestamp, etc.) are 
 
 [Interactive API documentation](https://swagger.io/) can be accessed at the path: `api-docs/`
 For local development use this: http://localhost:3000/api-docs \
-Just write JSDoc-annotated source code and it will automatically generate an OpenAPI (Swagger) specification. \
+Just write JSDoc-annotated source code and it will automatically generate an OpenAPI (Swagger) documentation. \
 Important: swaggerUI is disabled for the production env
 
 ```javascript
