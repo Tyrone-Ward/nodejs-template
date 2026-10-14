@@ -1,17 +1,24 @@
-#! /usr/bin/env node
+import 'dotenv/config'
+import express from 'express'
+import rootRouter from './routes/rootRoutes.js'
+import morganMiddleware from './middlewares/httpLpgger.js'
+import { errorHandler } from './middlewares/errorHandler.js'
+import swaggerDocument from './docs/openapi.json' with { type: 'json' }
+import swaggerUi from 'swagger-ui-express'
 
-import { expressServer, app, PORT } from '@config/index.js'
-import rootRouter from '@routes/rootRoutes.js'
-import morganMiddleware from '@middlewares/httpLpgger.js'
-import logger from '@utils/logger.js'
-import { errorHandler } from '@middlewares/errorHandler'
+const app = express()
 
 app.use(morganMiddleware)
 
+// parse application/json
+app.use(express.json())
+
+// for parsing application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }))
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 app.use('/', rootRouter)
 
 app.use(errorHandler)
 
-expressServer.listen(PORT, () => {
-  logger.info(`Listening on http://localhost:${PORT}`)
-})
+export { app }

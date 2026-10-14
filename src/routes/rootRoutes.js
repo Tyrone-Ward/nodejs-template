@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { root, error, apiHealth } from '@controllers/api'
+import { root, error, apiHealth } from '../controllers/api.js'
 
 const rootRouter = Router()
 

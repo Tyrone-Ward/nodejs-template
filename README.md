@@ -4,7 +4,7 @@ A barebones Node.js template project designed to help you speed up the process o
 
 ### 🚀 Main features
 
-- [ExpressJS](http://expressjs.com) framework with [TypeScript](https://www.typescriptlang.org/) on board
+- [ExpressJS](http://expressjs.com) framework
 - Built-in API documentation the at the `/api-docs` endpoint
 - Simple and universal logging with support for multiple storage devices
 
@@ -57,15 +57,16 @@ logger.http('message') // level 3
 logger.debug('message') // level 4
 ```
 
-In development mode, log messages of all severity levels will be printed to the console.
-In production mode, only `info`, `warn`, and `error` logs will be printed to the console. Also, error logs are stored in the `/logs` directory and rotated every 7 days.
+In development mode, log messages of all severity levels will be printed to the console. In production mode, only `info`, `warn`, and `error` logs
+will be printed to the console. Also, error logs are stored in the `/logs` directory and rotated every 7 days.
 
-Note: API request information (request url, response code, timestamp, etc.) are also automatically logged (using [morgan](https://github.com/expressjs/morgan)).
+Note: API request information (request url, response code, timestamp, etc.) are also automatically logged (using
+[morgan](https://github.com/expressjs/morgan)).
 
 ## SwaggerUI
 
-[Interactive API documentation](https://swagger.io/) can be accessed at the path: `api-docs/`
-For local development use this: http://localhost:3000/api-docs \
+[Interactive API documentation](https://swagger.io/) can be accessed at the path: `api-docs/` For local development use this:
+http://localhost:3000/api-docs \
 Just write JSDoc-annotated source code and it will automatically generate an OpenAPI (Swagger) documentation. \
 Important: swaggerUI is disabled for the production env
 
@@ -80,6 +81,6 @@ Important: swaggerUI is disabled for the production env
  *         description: Returns a mysterious string.
  */
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+    res.send('Hello World!')
 })
 ```
